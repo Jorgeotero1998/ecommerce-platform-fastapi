@@ -1,4 +1,4 @@
-services:
+﻿services:
   - type: web
     name: ecommerce-platform-fastapi-api
     env: docker
@@ -20,11 +20,4 @@ services:
       - key: ADMIN_PASSWORD
         value: "change-me-admin"
       - key: DATABASE_URL
-        fromDatabase:
-          name: ecommerce-platform-fastapi-db
-          property: connectionString
-
-databases:
-  - name: ecommerce-platform-fastapi-db
-    plan: free
-    databaseName: app
+        sync: false
